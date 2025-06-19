@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiotaScope - Servicios Bioinformáticos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #003b4d;
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+    }
+    details {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 2em auto;
+      max-width: 1000px;
+      padding: 1em;
+    }
+    summary.acordeon-titulo {
+      background: #0277bd;
+      color: white;
+      padding: 0.4em 0.8em;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    .acordeon-contenido {
+      background: #e3f2fd;
+      margin-top: 1em;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    .imagenes {
+      display: flex;
+      gap: 1em;
+      margin-top: 1em;
+      flex-wrap: wrap;
+    }
+    .imagenes a {
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+    .imagenes img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background: #e0e0e0;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BiotaScope</h1>
+    <p>Servicios bioinformáticos especializados en microbiota y datos ómicos</p>
+  </header>
+
+  <details>
+    <summary class="acordeon-titulo">Meta-barcoding</summary>
+    <div class="acordeon-contenido">
+      <p>Clasificación taxonómica y predicción funcional de comunidades microbianas a partir de secuencias amplificadas de 16S/ITS con QIIME2 y PICRUSt2.</p>
+      <div class="imagenes">
+        <a href="#"><img src="329e6928-943b-482a-bce9-b68e0942903b.png" alt="Ejemplo QIIME2"></a>
+        <a href="#"><img src="329e6928-943b-482a-bce9-b68e0942903b.png" alt="Predicción funcional PICRUSt2"></a>
+      </div>
+    </div>
+  </details>
+
+  <details >
+    <summary class="acordeon-titulo">Análisis Taxonómico (Kraken2)</summary>
+    <div class="acordeon-contenido">
+      <p>Identificación taxonómica mediante alineamiento con bases de datos personalizadas utilizando Kraken2 y Bracken.</p>
+      <div class="imagenes">
+        <a href="#"><img src="329e6928-943b-482a-bce9-b68e0942903b.png" alt="Gráfico Krona"></a>
+        <a href="#"><img src="329e6928-943b-482a-bce9-b68e0942903b.png" alt="Volcano plot diferencial"></a>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary class="acordeon-titulo">Perfilado Funcional (HUMAnN3)</summary>
+    <div class="acordeon-contenido">
+      <p>Perfilado de rutas metabólicas mediante alineamiento funcional y enriquecimiento, útil para caracterizar el potencial funcional de microbiotas complejas.</p>
+      <div class="imagenes">
+        <a href="#"><img src="329e6928-943b-482a-bce9-b68e0942903b.png" alt="Heatmap funcional"></a>
+        <a href="#"><img src="329e6928-943b-482a-bce9-b68e0942903b.png" alt="Gráfico de barras de rutas"></a>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary class="acordeon-titulo">Servicios Bioinformáticos Generales</summary>
+    <div class="acordeon-contenido">
+      <p>Procesamiento de datos genómicos y transcriptómicos, con herramientas adaptadas a distintos diseños experimentales.</p>
+      <ul>
+        <li>Mapeo y ensamblaje de secuencias</li>
+        <li>Anotación de variantes y genes</li>
+        <li>Transcriptómica (bulk y single-cell RNA-seq)</li>
+        <li>ChIP-seq y enriquecimiento funcional</li>
+      </ul>
+      <div class="imagenes">
+        <a href="#"><img src="329e6928-943b-482a-bce9-b68e0942903b.png" alt="Análisis RNA-seq"></a>
+      </div>
+    </div>
+  </details>
+
+  <footer>
+    <p>Contacto: <a href="mailto:angelsnake95@gmail.com">angelsnake95@gmail.com</a> | LinkedIn: <a href="https://linkedin.com/in/usuario">linkedin.com/in/usuario</a></p>
+    <p>&copy; 2025 BiotaScope</p>
+  </footer>
+</body>
+</html>
