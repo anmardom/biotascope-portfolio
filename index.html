@@ -17,6 +17,19 @@
       padding: 2em 1em;
       text-align: center;
     }
+    .lang-toggle {
+      text-align: center;
+      margin: 1em;
+    }
+    .lang-toggle button {
+      background: #0277bd;
+      color: white;
+      border: none;
+      padding: 0.6em 1.2em;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
     details {
       background: #fff;
       border-radius: 8px;
@@ -75,21 +88,29 @@
 <body>
   <header>
     <h1>BiotaScope</h1>
-    <p>Servicios bioinformáticos especializados en análisis meta-ómicos (microbiota, muestras ambientales) y datos ómicos.</p>
+    <p class="lang-es">Servicios bioinformáticos especializados en análisis meta-ómicos (microbiota, muestras ambientales) y datos ómicos.</p>
+    <p class="lang-en" style="display:none;">Bioinformatics services tailored to meta-omics analyses (microbiota, environmental samples) and omics data.</p>
   </header>
-
+  
+  <div class="lang-toggle">
+    <button onclick="toggleLanguage()">Cambiar idioma / Switch languages</button>
+  </div>
+  
   <details>
     <summary class="acordeon-titulo">Meta-barcoding</summary>
     <div class="acordeon-contenido">
-      <p>Clasificación taxonómica y predicción funcional de comunidades microbianas a partir de secuencias amplificadas de 16S/ITS con QIIME2 y PICRUSt2.</p>
+      <p class="lang-es">Clasificación taxonómica y predicción funcional de comunidades microbianas a partir de secuencias amplificadas de 16S/ITS con QIIME2 y PICRUSt2.</p>
+      <p class="lang-en">Taxonomic classification and functional prediction of microbial communities from 16S/ITS amplicon sequences using QIIME2 and PICRUSt2.</p>
       <div class="imagenes">
         <a href="img/qiime2_fmt_tutorial_taxa_barplot.png" target="_blank">
           <img src="img/qiime2_fmt_tutorial_taxa_barplot.png" alt="Ejemplo QIIME2">
-          <span>Ejemplo QIIME2</span>
+          <span class="lang-es">Ejemplo QIIME2</span>
+          <span class="lang-en" style="display:none;">QIIME2 example</span>
         </a>
         <a href="img/image.png" target="_blank">
           <img src="img/image.png" alt="Predicción funcional PICRUSt2">
-          <span>Predicción funcional PICRUSt2</span>
+          <span class="lang-es">Predicción funcional PICRUSt2</span>
+          <span class="lang-en" style="display:none;">PICRUSt2 functional prediction</span>
         </a>
       </div>
     </div>
@@ -98,15 +119,18 @@
   <details >
     <summary class="acordeon-titulo">Análisis Taxonómico (Kraken2)</summary>
     <div class="acordeon-contenido">
-      <p>Identificación taxonómica mediante alineamiento con bases de datos personalizadas utilizando Kraken2 y Bracken.</p>
+      <p class="lang-es">Identificación taxonómica mediante alineamiento con bases de datos personalizadas utilizando Kraken2 y Bracken.</p>
+      <p class="lang-en" style="display:none;">Taxonomic identification through alignments with customized databases using Kraken2 and Bracken.</p>
       <div class="imagenes">
         <a href="img/krona_dataset5_salivaryVSmidguts_snapshot.png" target="_blank">
           <img src="img/krona_dataset5_salivaryVSmidguts_snapshot.png" alt="Gráfico Krona">
-          <span>Gráfico Krona</span>
+          <span class="lang-es">Gráfico Krona</span>
+          <span class="lang-en" style="display:none;">Krona chart</span>
         </a>
         <a href="img/Volcano_dataset5_Salivary_GlandsVSMidguts.png" target="_blank">
           <img src="img/Volcano_dataset5_Salivary_GlandsVSMidguts.png" alt="Volcano plot diferencial">
-          <span>Volcano Plot Diferencial</span>
+          <span class="lang-es">Volcano plot abundancia diferencial</span>
+          <span class="lang-en" style="display:none;">Differential abundance volcano plot</span>
         </a>
       </div>
     </div>
@@ -115,15 +139,18 @@
   <details>
     <summary class="acordeon-titulo">Perfilado Funcional (HUMAnN3)</summary>
     <div class="acordeon-contenido">
-      <p>Perfilado de rutas metabólicas mediante alineamiento funcional y enriquecimiento, útil para caracterizar el potencial funcional de microbiotas complejas.</p>
+      <p class="lang-es">Perfilado de rutas metabólicas mediante alineamiento funcional y enriquecimiento, útil para caracterizar el potencial funcional de microbiotas complejas.</p>
+      <p class="lang-en" style="display:none;">Metabolic pathways profiling through functional alignment and enrichment analysis, useful to characterize the functional potential of complex microbiotas.</p>
       <div class="imagenes">
         <a href="img/heatmap_functional_dataset5.png" target="_blank">
           <img src="img/heatmap_functional_dataset5.png" alt="Heatmap funcional">
-          <span>Heatmap funcional</span>
+          <span class="lang-es">Heatmap funcional</span>
+          <span class="lang-en" style="display:none;">Functional heatmap</span>
         </a>
         <a href="img/barplot_functional_dataset5.png" target="_blank">
           <img src="img/barplot_functional_dataset5.png" alt="Gráfico de barras de rutas">
-          <span>Gráfico de barras tras comparar funciones ruta a ruta</span>
+          <span class="lang-es">Gráfico de barras de rutas</span>
+          <span class="lang-en" style="display:none;">Pathways barplot</span>
         </a>
       </div>
     </div>
@@ -132,22 +159,46 @@
   <details>
     <summary class="acordeon-titulo">Servicios Bioinformáticos Generales</summary>
     <div class="acordeon-contenido">
-      <p>Procesamiento de datos genómicos y transcriptómicos, con herramientas adaptadas a distintos diseños experimentales.</p>
-      <ul>
+      <p class="lang-es">Procesamiento de datos genómicos y transcriptómicos, con herramientas adaptadas a distintos diseños experimentales.</p>
+      <p class="lang-en" style="display:none;">Genomic and transcriptomic data processing, using tools adapted to various experimental designs.</p>
+      <ul class="lang-es">
         <li>Mapeo y ensamblaje de secuencias</li>
         <li>Anotación de variantes y genes</li>
         <li>Transcriptómica (bulk y single-cell RNA-seq)</li>
         <li>ChIP-seq y enriquecimiento funcional</li>
       </ul>
+      <ul class="lang-en" style="display:none;">
+        <li>Sequence mapping and assembly</li>
+        <li>Variant calling and gene annotation</li>
+        <li>Transcriptomics (bulk and single-cell RNA-seq)</li>
+        <li>ChIP-seq and functional enrichment</li>
+      </ul>
     </div>
   </details>
 
   <footer>
-    <p>Contacto: <a href="mailto:angelsnake95@gmail.com">angelsnake95@gmail.com</a> | 
+    <p class="lang-es">Contacto: <a href="mailto:angelsnake95@gmail.com">angelsnake95@gmail.com</a> | 
       Más sobre mí: <a href="img/CV13 Bioinformatico Angel Martin Dominguez Canva.pdf" target="_blank">CV</a> | 
       Mis Redes: <a href="https://www.linkedin.com/in/angel-martin-dominguez-560040155/">Linkedin</a>
     </p>
+    <p class="lang-en">Contact: <a href="mailto:angelsnake95@gmail.com">angelsnake95@gmail.com</a> | 
+      More about me: <a href="img/CV13 Bioinformatico Angel Martin Dominguez Canva.pdf" target="_blank">CV</a> | 
+      My socials: <a href="https://www.linkedin.com/in/angel-martin-dominguez-560040155/">Linkedin</a>
+    </p>
     <p>&copy; 2025 BiotaScope</p>
   </footer>
+
+  <script>
+    let currentLang = 'es';
+    function toggleLanguage() {
+      const esElems = document.querySelectorAll('.lang-es');
+      const enElems = document.querySelectorAll('.lang-en');
+      const show = currentLang === 'es' ? 'en' : 'es';
+      currentLang = show;
+
+      esElems.forEach(el => el.style.display = (show === 'es') ? 'block' : 'none');
+      enElems.forEach(el => el.style.display = (show === 'en') ? 'block' : 'none');
+    }
+  </script>
 </body>
 </html>
